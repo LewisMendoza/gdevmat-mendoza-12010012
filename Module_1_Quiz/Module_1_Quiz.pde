@@ -17,6 +17,7 @@ void draw()
   // 1.) f(x) = x^2 - 15x - 3 (Yellow)
   drawQuadraticFunction();
   
+  // 2.) f(x) = 5x + 30 (purple)
 }
 
 // Draws a cartesian plane as a guide
@@ -61,4 +62,9 @@ void drawLinearFunction()
   color purple = color(128, 0, 128);
   fill (purple);
   stroke(purple);
+  
+  for (int x = -200; x <= 200; x++)
+  {
+    circle(x, (x * 5) +30, 5);
+  }
 }
