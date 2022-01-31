@@ -18,6 +18,10 @@ void draw()
   drawQuadraticFunction();
   
   // 2.) f(x) = 5x + 30 (purple)
+  drawLinearFunction();
+  
+  // 3.) Sine Wave Function (Any Color)
+  drawSineWaveFunction();
 }
 
 // Draws a cartesian plane as a guide
@@ -37,6 +41,7 @@ void drawCartesianPlane()
   }
 }
 
+// Item no. 1 Quadratic Function
 void drawQuadraticFunction()
 {
   /*
@@ -53,6 +58,7 @@ void drawQuadraticFunction()
   } 
 }
 
+// Item no. 2 Linear Function
 void drawLinearFunction()
 {
   /*
@@ -66,5 +72,19 @@ void drawLinearFunction()
   for (int x = -200; x <= 200; x++)
   {
     circle(x, (x * 5) +30, 5);
+  }
+}
+
+// Item no. 3 Sine Wave Function
+void drawSineWaveFunction()
+{
+  color red = color (255, 0, 0);
+  fill (red);
+  stroke (red);
+  float radius = 50;
+  
+  for (int x = 0; x <= 360; x++)
+  {
+    circle((float)Math.sin(x * 10) + 10, (float)Math.sin(x * 10) + 10, 5);
   }
 }
