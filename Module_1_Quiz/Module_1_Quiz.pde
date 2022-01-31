@@ -1,3 +1,9 @@
+// Global Variables
+int diameter = 16;
+float t = 0.0; // Time
+float dt = .1; // Change in Time
+float amplitude = 100.0;
+float frequency = .3;
 
 // initializes functions at the very first frame
 void setup()
@@ -22,6 +28,8 @@ void draw()
   
   // 3.) Sine Wave Function (Any Color)
   drawSineWaveFunction();
+  
+  t += dt; // Time
 }
 
 // Draws a cartesian plane as a guide
@@ -81,10 +89,9 @@ void drawSineWaveFunction()
   color red = color (255, 0, 0);
   fill (red);
   stroke (red);
-  float radius = 50;
   
-  for (int x = 0; x <= 360; x++)
+  for (int x = 0; x < x/diameter+100; x++)
   {
-    circle((float)Math.sin(x * 10) + 10, (float)Math.sin(x * 10) + 10, 5);
+   circle(((float)(x * diameter)), ((float)(amplitude*Math.sin(frequency*(t+x)) + x)), ((float)(diameter)));
   }
 }
