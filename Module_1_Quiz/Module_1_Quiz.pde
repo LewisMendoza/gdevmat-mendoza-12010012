@@ -1,5 +1,5 @@
 // Global Variables
-int diameter = 16;
+int diameter = 15;
 float t = 0.0; // Time
 float dt = .1; // Change in Time
 float amplitude = 100.0;
@@ -90,7 +90,7 @@ void drawSineWaveFunction()
   fill (red);
   stroke (red);
   
-  for (int x = 0; x < x/diameter+100; x++)
+  for (int x = -300; x < x/diameter+45; x++)
   {
    circle(((float)(x * diameter)), ((float)(amplitude*Math.sin(frequency*(t+x)) + x)), ((float)(diameter)));
   }
