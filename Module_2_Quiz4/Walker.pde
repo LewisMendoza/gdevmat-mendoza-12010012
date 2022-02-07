@@ -13,7 +13,7 @@ public class Walker
  public int r = 255;
  public int g = 255;
  public int b = 255;
- public float tr = 0, tg = 0, tb = 0;
+ public float tr = 0, tg = 127.5, tb = 255;
  
  void render()
  {
