@@ -42,15 +42,11 @@ public class Walker
  {
    r = int(map(noise(tr), 0, 1, 0, 255));
    tr -= 0.01f;
-   println(r);
    
    g = int(map(noise(tg), 0, 1, 0, 255));
    tg -= 0.01f;
-   println(g);
    
    b = int(map(noise(tb), 0, 1, 0, 255));
    tb -= 0.01f;
-   println(b);
-   println("==========");
  }
 }

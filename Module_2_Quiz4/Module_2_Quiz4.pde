@@ -7,7 +7,6 @@ void setup()
 
 Walker perlinWalker = new Walker();
 
-
 void draw()
 {
   perlinWalker.perlinWalk();
