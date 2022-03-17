@@ -3,6 +3,7 @@ public class Matter
  public PVector position = new PVector();
  public PVector scale = new PVector();
  public PVector rgb = new PVector(255, 255, 255);
+ public int matterSpeed = 10;
  public color Color;
  
  public void spawn()
@@ -14,7 +15,7 @@ public class Matter
  public void pull(BlackHole blackHole)
  {
    PVector direction = PVector.sub( blackHole.position, this.position);
-   this.position.add(direction.normalize().mult(7));
+   this.position.add(direction.normalize().mult(matterSpeed));
  }
   
  public void rescaleAndColor(BlackHole blackhole)
