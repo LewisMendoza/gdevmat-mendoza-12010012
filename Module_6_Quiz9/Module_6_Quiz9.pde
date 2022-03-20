@@ -33,14 +33,14 @@ void draw()
   {
     float mew = 0.01f;
     float normal = 1;
-    if (w.position.x >= 0)
-    {
-      mew = 0.4f;
-    }
-    
-    else
+    if (w.position.x < 0)
     {
       mew = 0.01f;
+    }
+    
+    else if (w.position.x >= 0)
+    {
+      mew = 0.4f;
     }
     
     float frictionMagnitude = mew * normal;
