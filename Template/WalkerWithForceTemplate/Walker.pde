@@ -27,7 +27,7 @@ public class Walker
   {
     this.velocity.add(this.acceleration); // velocity accumulation
     this.velocity.limit(velocityLimit);
-    this.position.add(this.veloicty);
+    this.position.add(this.velocity);
     this.acceleration.mult(0); // resets acceleration every frame
   }
   
