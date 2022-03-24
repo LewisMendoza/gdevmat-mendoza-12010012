@@ -7,7 +7,7 @@ public class Walker
  
  public float velocityLimit = 10.0f;
  public float scale;
- public float mass;
+ public float mass = 0;
  public color Color;
  public float r, g, b, a;
  

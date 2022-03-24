@@ -1,6 +1,5 @@
 Walker[] walker = new Walker[10];
 PVector wind = new PVector(0.2, 0);
-PVector gravity = new PVector(0, -0.4); // CHANGE THIS SOON
 
 void setup()
 {
@@ -28,7 +27,6 @@ void reset()
 void draw()
 {
   background(0);
-  
   for (Walker w : walker)
   {
     float mew = 0.01f;
@@ -48,6 +46,8 @@ void draw()
     friction.mult(-1);
     friction.normalize();
     friction.mult(frictionMagnitude);
+    
+    PVector gravity = new PVector(0, -0.6 * w.mass);
     
     w.render();
     w.update();

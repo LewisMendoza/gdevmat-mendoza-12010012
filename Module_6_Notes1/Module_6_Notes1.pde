@@ -38,7 +38,7 @@ void draw()
     friction.mult(frictionMagnintude);
     w.applyForce(friction);
     
-    PVector gravity = new PVector(0, -0.15 * w.mass);
+    PVector gravity = new PVector(0, -0.15 * w.mass); // For Bonus, apply it to quiz
     w.update();
     w.applyForce(gravity);
     w.render();
